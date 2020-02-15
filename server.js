@@ -36,6 +36,8 @@ app.get("/scrape", function (req, res) {
                 .children("a")
                 .text()
                 .trim();
+
+
             result.link = $(element)
                 .children("article")
                 .children("div")
@@ -43,6 +45,7 @@ app.get("/scrape", function (req, res) {
                 .children("a")
                 .attr("href")
                 .trim();
+
             result.summary = $(element)
                 .children("article")
                 .children("div")
@@ -51,7 +54,7 @@ app.get("/scrape", function (req, res) {
                 .text()
                 .trim();
 
-            db.Article.create(result)
+            db.Article.updateOne(result, result, { upsert: true })
                 .then(function (dbArticle) {
                     console.log(dbArticle);
                 })
@@ -61,6 +64,16 @@ app.get("/scrape", function (req, res) {
         });
         res.send("Scrape Complete.");
     });
+});
+
+app.get("/", function (req, res) {
+    db.Article.find({}).then(function (dbResults) {
+        var object = {
+            articles: dbResults
+        };
+        res.render("index", object)
+    });
+
 });
 
 app.get("/articles", function (req, res) {
