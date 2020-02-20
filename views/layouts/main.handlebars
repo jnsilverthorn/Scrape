@@ -3,14 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../public/style.css" type="text/css">
+    <link rel="stylesheet" href="/style.css" type="text/css">
     <title>Scrape!</title>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="../../public/app.js"></script>
+    <script src="/app.js"></script>
 </head>
 
 <body>
-    {{{ body }}}
+    <div class="header">Mongo Scrape - Nature.com
+        <div class="nav">
+            <div class="nav1" id="home"><a href="/">Home</a></div>
+            <div class="nav1" id="saved_articles"><a href="/saved">Saved Articles</a></div>
+            <div class="nav1" id="scrape">Scrape New Articles</div>
+            <div class="nav1" id="clear_articles">Clear Articles</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            {{{ body }}}
+        </div>
+    </div>
 </body>
 
 </html>

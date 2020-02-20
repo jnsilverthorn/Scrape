@@ -1,0 +1,21 @@
+{{#each articles}}
+<div class="card">
+    <div class="card_title">
+        <a class="link" href="https://www.nature.com{{link}}" target="_blank">{{title}}</a>
+        <div class="remove_btn" id="{{_id}}">Remove Article</div>
+        <div class="addNote_btn" id="{{_id}}">View Notes</div>
+    </div>
+
+    <div class="card_summary">
+        {{summary}}
+    </div>
+</div>
+<br />
+{{/each}}
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">x</span>
+        <p>note</p>
+    </div>
+</div>
