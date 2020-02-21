@@ -163,9 +163,12 @@ a{
   
   .close {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    display: inline;
+    position: sticky;
+    left: 1000px;
+
   }
   
   .close:hover,
@@ -173,4 +176,85 @@ a{
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .addNoteDiv{
+      display: none;
+  }
+
+  #xBtn{
+      margin: 5px;
+      size: 15px;
+      padding: 5px;
+      display: inline;
+      position: sticky;
+      left: 1000px;
+  }
+
+  #xBtn:hover{
+      cursor: pointer;
+      color: gray;
+  }
+
+  #noted{
+      border: 1px solid black;
+      padding: 5px;
+      margin: 10px auto;
+      text-align: center;
+      width: 75%;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px 2px gray;
+  }
+
+  #notedTitle{
+      display: block;
+  }
+
+  #notedBody{
+      display: inline-block;
+  }
+
+  .articleID{
+      display: inline;
+  }
+
+  #addNote{
+      border: 2px solid black;
+      border-radius: 5px;
+      margin: 10px auto;
+      background-color: lightgray;
+      text-align: center;
+      max-width: fit-content;
+      padding: 10px;
+  }
+
+  #addNote:hover{
+      background-color: gray;
+      cursor: pointer;
+  }
+
+  #modalTitle{
+      margin: 10px auto;
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+  }
+
+  .saveBtn{
+      padding: 10px;
+      margin: 10px auto;
+      text-align: center;
+      background-color: lightgray;
+      border: 2px solid black;
+      border-radius: 5px;
+      max-width: fit-content;
+  }
+
+  .saveBtn:hover{
+      background-color: gray;
+      cursor: pointer;
+  }
+
+  .titleInput, .bodyInput{
+      width: 75%;
   }

@@ -164,8 +164,21 @@ router.post("/note/:id", function (req, res) {
         });
 });
 
+router.delete("/note/:id", function (req, res) {
+    db.Note.remove({ _id: req.params.id })
+        .then(function (result) {
+            res.json(result);
+        })
+        .catch(function (error) {
+            res.json(error);
+        });
+});
+
 router.get("/note/:id", function (req, res) {
-    db.Note.find({ _id: req.params.id })
+    db.Article.find({ _id: req.params.id })
+        .populate({
+            path: "note"
+        })
         .then(function (result) {
             res.json(result);
         })
