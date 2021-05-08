@@ -28,6 +28,6 @@
     "mongoose": "^5.8.11"
   },
   "devDependencies": {
-    "handlebars": "^4.5.0"
+    "handlebars": "^4.7.7"
   }
 }
